@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalmFlow - Sign Up</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #FFD6E0, #E1E9FF);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .signup-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(15px);
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .signup-container h2 {
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+        .input-field {
+            width: 93%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            background: rgba(255, 255, 255, 0.6);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #ff758f, #ff7eb3);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .signup-btn:hover {
+            background: linear-gradient(135deg, #ff5b7f, #ff6699);
+        }
+        .links {
+            margin-top: 10px;
+        }
+        .links a {
+            text-decoration: none;
+            color: #ff758f;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .links a:hover {
+            color: #ff5b7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create Your Account 💖</h2>
+        <input type="text" class="input-field" placeholder="Enter your name">
+        <input type="email" class="input-field" placeholder="Enter your email">
+        <input type="password" class="input-field" placeholder="Create a password">
+        <input type="password" class="input-field" placeholder="Confirm password">
+        
+        
+        
+        <input type="text" id="idNumber" class="input-field" placeholder="Enter Aadhar">
+        <input type="tel" class="input-field" placeholder="Enter your phone number">
+        
+        <button class="signup-btn">Sign Up</button>
+        <div class="links">
+            <a href="login.html">Already have an account? Login</a>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".signup-btn").addEventListener("click", async () => {
+            const name = document.querySelector("input[placeholder='Enter your name']").value;
+            const email = document.querySelector("input[placeholder='Enter your email']").value;
+            const password = document.querySelector("input[placeholder='Create a password']").value;
+            
+            const idNumber = document.getElementById("idNumber").value;
+            const phone = document.querySelector("input[placeholder='Enter your phone number']").value;
+    
+            const response = await fetch("http://localhost:5000/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, password, idNumber, phone })
+            });
+    
+            const data = await response.json();
+            alert(data.message);
+        });
+    </script>
+    
+</body>
+</html>
