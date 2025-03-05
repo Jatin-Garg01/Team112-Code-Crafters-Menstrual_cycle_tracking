@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calmflow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        header {
+            background-color: white;
+            padding: 0.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links a {
+            margin-left: 1rem;
+            color: #4a4a4a;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            color: #000;
+            font-size: large;
+        }
+        main {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        .main-title {
+            font-size: 3rem;
+            color: #4a4a4a;
+        }
+        .main-description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            margin-top: 1rem;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 16rem;
+            text-align: center;
+        }
+        .card-icon {
+            font-size: 2rem;
+            color: #ec4899;
+            margin-bottom: 1rem;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            color: #4a4a4a;
+        }
+        .card-description {
+            color: #6b7280;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo flex items-center">
+                <img class="logo" src="images/Screenshot_2025-03-05_123150-removebg-preview.png" alt="Calmflow Logo" style="width: 250px;height: 100px;margin-left: -75px;" class="h-6 mr-2">
+            </div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Quiz</a>
+                <a href="#">Login/Signup</a>
+                <a href="#">Purchase</a>
+                <a href="#"><i class="fas fa-user"></i></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1 class="main-title">Calmflow</h1>
+        <p class="main-description">This flow was meant to make service work flow simple while a seamless system generates gems.</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🌸</div>
+                <h2 class="card-title">My Private Space</h2>
+                <p class="card-description"></p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h2 class="card-title">Anonymous Community</h2>
+                <p class="card-description"></p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛍</div>
+                <h2 class="card-title"><a href="product_essential.html">Buy Period Essentials</a></h2>
+                <p class="card-description"></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
